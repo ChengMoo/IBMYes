@@ -49,5 +49,10 @@ jobs:
         echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
         sudo apt-get update
         sudo apt-get install cf-cli
+        cf login <<EOF
+        $IBM_ACCOUNT
+        $REGION_NUM
+        no
+        EOF
         cf push
         #/home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud cf push

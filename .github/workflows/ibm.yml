@@ -44,11 +44,10 @@ jobs:
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target -r eu-gb
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target -g "$RESOURSE_ID"
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target --cf
+        /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud cf install
         wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
         echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
         sudo apt-get update
         sudo apt-get install cf-cli
-        cf install
         cf push
-        #/home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud cf install
         #/home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud cf push

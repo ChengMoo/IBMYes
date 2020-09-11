@@ -41,6 +41,11 @@ jobs:
         #sed -i "s:/:${{ secrets.PATH }}:"  /home/runner/work/IBMYes/IBMYes/v2ray-cloudfoundry/v2ray/config.json
         sed -i "s/128/256/g"  /home/runner/work/IBMYes/IBMYes/v2ray-cloudfoundry/manifest.yml
         #cat /home/runner/work/IBMYes/IBMYes/v2ray-cloudfoundry/v2ray/config.json
+        cd /home/runner/work/IBMYes/IBMYes/
+        mv /home/runner/work/IBMYes/IBMYes/v2ray-cloudfoundry/ /home/runner/work/IBMYes/IBMYes/ruby/
+        mv /home/runner/work/IBMYes/IBMYes/ruby/v2ray/ /home/runner/work/IBMYes/IBMYes/ruby/ruby/
+        mv /home/runner/work/IBMYes/IBMYes/ruby/ruby/v2ray /home/runner/work/IBMYes/IBMYes/ruby/ruby/ruby
+        cd /home/runner/work/IBMYes/IBMYes/ruby/
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target -r eu-gb
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target -g "$RESOURSE_ID"
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target --cf
